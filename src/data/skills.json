@@ -1,0 +1,54 @@
+[
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/html-logo-transparent_kyhnyo.webp",
+    "name": "HTML"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/4202020_css3_html_logo_social_social_media_icon_bp3uqy.png",
+    "name": "CSS"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083047/skilss/Unofficial_JavaScript_logo_2.svg_m72hbc.png",
+    "name": "JavaScript"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/Typescript_logo_2020.svg_xkvvek.png",
+    "name": "TypeScript"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/1_7jRD5QhgARucFKvRHFxpOg_x209mv.png",
+    "name": "Styled components"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/18133_emd1i9.png",
+    "name": "Git"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/nodelogo_mhvwol.png",
+    "name": "Node.js"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
+    "name": "React.js"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/25231_ar5a30.png",
+    "name": "GitHub"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/1_R4c8lHBHuH5qyqOtZb3h-w_jrh5cn.webp",
+    "name": "Firebase"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
+    "name": "Redux"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/channels4_profile_zncvmm.jpg",
+    "name": "Storybook"
+  },
+  {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/tailwindcss-mark.79614a5f61617ba49a0891494521226b_apvjvp.svg",
+    "name": "Tailwind CSS"
+  }
+]
