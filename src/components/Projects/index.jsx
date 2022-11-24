@@ -29,7 +29,31 @@ export const Projects = () => {
                 />
               ))}
             </div>
-            <p className=" text-base mt-6 text-letter">{pro.description}</p>
+            <div className="mt-6 break-words">
+              <span className=" font-bold">Technologies:</span>
+              {pro.technologies.map((tech, index) => {
+                if (index !== pro.technologies.length - 1) {
+                  return (
+                    <span
+                      key={`${tech.alt}_${pro.name}_text`}
+                      className=" ml-1 font-semibold"
+                    >
+                      {tech.alt},
+                    </span>
+                  );
+                } else {
+                  return (
+                    <span
+                      key={`${tech.alt}_${pro.name}_text`}
+                      className=" ml-1 font-semibold"
+                    >
+                      {tech.alt}.
+                    </span>
+                  );
+                }
+              })}
+            </div>
+            <p className=" text-base mt-3 text-letter">{pro.description}</p>
             <div className=" mt-6">
               <a
                 href={pro.link}

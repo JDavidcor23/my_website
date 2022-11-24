@@ -20,7 +20,7 @@ export const Technologies = () => {
               alt={skill.name}
               className=" w-20 h-20 object-contain"
             />
-            <p className=" mt-2 font-bold">{skill.name}</p>
+            <p className=" mt-2 font-bold text-center">{skill.name}</p>
           </div>
         ))}
       </div>
