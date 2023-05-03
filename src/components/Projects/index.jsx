@@ -15,7 +15,7 @@ export const Projects = () => {
           <img
             src={pro.img}
             alt={pro.name}
-            className="object-cover w-full md:w-30rem md:h-60 rounded-xl"
+            className="object-cover w-full md:w-[390px] md:h-60 rounded-xl"
           />
           <div className="pl-5 flex flex-col justify-between mt-6 md:mt-0">
             <h3 className=" font-bold text-2xl mb-6 text-letter">{pro.name}</h3>
@@ -54,6 +54,9 @@ export const Projects = () => {
               })}
             </div>
             <p className=" text-base mt-3 text-letter">{pro.description}</p>
+            <p className=" text-base mt-3 text-letter">
+              {pro?.descriptionBackend}
+            </p>
             <div className=" mt-6">
               <a
                 href={pro.link}
@@ -68,7 +71,15 @@ export const Projects = () => {
                 className="h-10 px-5 py-2 text-black transition-colors duration-150 border border-black rounded-md focus:shadow-outline hover:bg-black hover:text-indigo-100 text-lg ml-3"
               >
                 <span>{"</>"}</span>
-                Code
+                Code Frontend
+              </a>
+              <a
+                href={pro?.backend}
+                target="_blank"
+                className="h-10 px-5 py-2 text-black transition-colors duration-150 border border-black rounded-md focus:shadow-outline hover:bg-black hover:text-indigo-100 text-lg ml-3"
+              >
+                <span>{"</>"}</span>
+                Code Backend
               </a>
             </div>
           </div>

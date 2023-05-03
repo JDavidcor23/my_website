@@ -70,23 +70,25 @@
     ]
   },
   {
-    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/v1647464405/dzbiw4cqzhweufranhub.png",
-    "name": "Worknow",
-    "description": "The platform that allows workers in manual trades and normal users to connect, agree on a price and once the hiring is finished, rate the worker.",
-    "link": "https://work-now-6ba72.web.app/",
-    "gitHub": "https://github.com/JDavidcor23/worknow",
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683130863/Screenshot_2023-05-03_112052_gbo25c.png",
+    "name": "Harry Potter app",
+    "description": "Add a harry potter character, if he/she is alive or dead and get the data in real time. (integration with Bitbucket pipelines CI/CD)",
+    "backend": "https://github.com/JDavidcor23/graphql_potter",
+    "descriptionBackend": "This is the backend of the harry potter app, it is a graphql api, which allows you to add a character, if he/she is alive or dead and get the data in real time.",
+    "link": "http://harrry-potter-graphql-jdavidcor23.s3-website-us-east-1.amazonaws.com/",
+    "gitHub": "https://github.com/JDavidcor23/client_graphql_potter",
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
         "alt": "React.js"
       },
       {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
-        "alt": "Redux"
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683131183/mongodb_bywyac.svg",
+        "alt": "Mongodb"
       },
       {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/1_R4c8lHBHuH5qyqOtZb3h-w_jrh5cn.webp",
-        "alt": "Firebase"
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669171440/skilss/GraphQL_Logo.svg_z2r6kn.png",
+        "alt": "GraphQL"
       }
     ]
   },
