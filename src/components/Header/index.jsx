@@ -21,9 +21,9 @@ export const Header = () => {
           >
             <button
               id="github"
-              class="bg-white sticky duration-500 border-2 border-black  w-12 transform m-3 hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-black "
+              className="bg-white sticky duration-500 border-2 border-black  w-12 transform m-3 hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-black "
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </button>
           </a>
           <a
@@ -33,27 +33,32 @@ export const Header = () => {
           >
             <button
               id="linkedin"
-              class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 m-3 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl"
+              className="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 m-3 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in"></i>
             </button>
           </a>
         </div>
       </div>
       <div className="flex flex-col items-center text-center w-90% smx:max-w-500px smx:items-start smx:text-start">
         <h1 className="font-black text-3xl mb-6 text-letter">
-          Hi, I am Jorge Diaz, Web Developer
+          Hi, I am Jorge Diaz, FULLSTACK DEVELOPER
         </h1>
         <p className=" text-xl text-letter">
           I am a web developer, who loves to learn every day, best practices,
           technologies and algorithms, passionate about web 3. I have many
           experiences in creating websites using different frameworks and
-          technologies. I have created many websites using React.js, Node.js,
+          technologies. I have created many apps using React.js, Node.js,
           TypeScript, JavaScript, HTML, CSS, Bootstrap, Tailwind CSS and others.
         </p>
-        <button className="font-bold text-xl mt-5 p-5 text-white bg-cyan-500 rounded-md">
-          Download Resume
-        </button>
+        <a
+          href="https://drive.google.com/file/d/1dzPBOcSDYy4B0XwOkfop8oZfyTSCwqLw/view?usp=sharing"
+          target="_blank"
+        >
+          <button className="font-bold text-xl mt-5 p-5 text-white bg-cyan-500 rounded-md">
+            Download Resume
+          </button>
+        </a>
       </div>
     </header>
   );

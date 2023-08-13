@@ -1,9 +1,57 @@
 [
   {
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1691891277/Screenshot_2023-08-12_204738_lp2jaj.png",
+    "name": "Demoo reels",
+    "link": "https://demoo-reels.vercel.app/",
+    "frontend": "https://github.com/JDavidcor23/demoo_reels/tree/master/client",
+    "backend": "https://github.com/JDavidcor23/demoo_reels/tree/master/server",
+    "description": "Discover 'Demoo Reels'! The online platform that empowers designers, animators, and 3D modelers to showcase their talent to the world and receive exciting professional opportunities, all in one place!",
+    "currentlyInDevelopment": true,
+    "technologies": [
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1691892752/socket_io_logo_icon_144874_l4gehg.png",
+        "alt": "Socketio"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083047/skilss/Unofficial_JavaScript_logo_2.svg_m72hbc.png",
+        "alt": "JavaScript"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
+        "alt": "React.js"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/html-logo-transparent_kyhnyo.webp",
+        "alt": "HTML"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/tailwindcss-mark.79614a5f61617ba49a0891494521226b_apvjvp.svg",
+        "alt": "Tailwind CSS"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/18133_emd1i9.png",
+        "alt": "Git"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/25231_ar5a30.png",
+        "alt": "GitHub"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/nodelogo_mhvwol.png",
+        "alt": "Node.js"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
+        "alt": "Redux"
+      }
+    ]
+  },
+  {
     "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669140341/porfolio-react/Sin_t%C3%ADtulo_sq9igs.png",
     "name": "Adoption app",
     "link": "https://adoption-wvcg.vercel.app/home",
-    "gitHub": "https://github.com/JDavidcor23/adoption",
+    "frontend": "https://github.com/JDavidcor23/adoption/tree/master/client",
+    "backend": "https://github.com/JDavidcor23/adoption/tree/master/server",
     "description": "Adoption app, is an application to select your favorite pet, chat with the pet owner, save the pets you like, learn more about each pet such as: their skills, where they live, breed and age.",
     "technologies": [
       {
@@ -49,7 +97,7 @@
     "name": "Rick and Morty app",
     "description": "This app allows you to generate new characters from the Rick and Morty series, have a history of the characters brought in and filter them in a search engine.",
     "link": "https://jdavidcor23.github.io/rick-morty-graphql/",
-    "gitHub": "https://github.com/JDavidcor23/rick-morty-graphql",
+    "frontend": "https://github.com/JDavidcor23/rick-morty-graphql",
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083047/skilss/Unofficial_JavaScript_logo_2.svg_m72hbc.png",
@@ -70,23 +118,25 @@
     ]
   },
   {
-    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/v1647464405/dzbiw4cqzhweufranhub.png",
-    "name": "Worknow",
-    "description": "The platform that allows workers in manual trades and normal users to connect, agree on a price and once the hiring is finished, rate the worker.",
-    "link": "https://work-now-6ba72.web.app/",
-    "gitHub": "https://github.com/JDavidcor23/worknow",
+    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683130863/Screenshot_2023-05-03_112052_gbo25c.png",
+    "name": "Harry Potter app",
+    "description": "Add a harry potter character, if he/she is alive or dead and get the data in real time. (integration with Bitbucket pipelines CI/CD)",
+    "backend": "https://github.com/JDavidcor23/graphql_potter",
+    "descriptionBackend": "This is the backend of the harry potter app, it is a graphql api, which allows you to add a character, if he/she is alive or dead and get the data in real time.",
+    "link": "http://harrry-potter-graphql-jdavidcor23.s3-website-us-east-1.amazonaws.com/",
+    "frontend": "https://github.com/JDavidcor23/client_graphql_potter",
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
         "alt": "React.js"
       },
       {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
-        "alt": "Redux"
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683131183/mongodb_bywyac.svg",
+        "alt": "Mongodb"
       },
       {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/1_R4c8lHBHuH5qyqOtZb3h-w_jrh5cn.webp",
-        "alt": "Firebase"
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669171440/skilss/GraphQL_Logo.svg_z2r6kn.png",
+        "alt": "GraphQL"
       }
     ]
   },
@@ -95,7 +145,7 @@
     "name": "Amazonas",
     "description": "This page is inspired by Amazon, which has several items for you to buy, you can log in with Google, Facebook or your email account, you can also filter, search, add to cart, sell, delete your products and edit them.",
     "link": "https://as-74bd2.web.app/",
-    "gitHub": "https://github.com/JDavidcor23/amazonas",
+    "frontend": "https://github.com/JDavidcor23/amazonas",
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
@@ -120,7 +170,7 @@
     "name": "Block Master",
     "description": "It is an application that allows you to search, filter and add as favorite the movie you want, with this you can see the trailer and the description.",
     "link": "https://block-master-two.vercel.app/",
-    "gitHub": "https://github.com/JDavidcor23/Block_master",
+    "frontend": "https://github.com/JDavidcor23/Block_master",
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",

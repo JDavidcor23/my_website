@@ -15,9 +15,9 @@ export const Footer = () => {
           >
             <button
               id="github"
-              class="bg-white sticky duration-500 border-2 border-black  w-12 transform m-3 hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-black "
+              className="bg-white sticky duration-500 border-2 border-black  w-12 transform m-3 hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-black "
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </button>
           </a>
           <a
@@ -27,9 +27,9 @@ export const Footer = () => {
           >
             <button
               id="linkedin"
-              class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 m-3 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl"
+              className="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 m-3 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in"></i>
             </button>
           </a>
         </div>

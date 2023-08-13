@@ -10,14 +10,15 @@ export const Projects = () => {
       {projectsData.map((pro) => (
         <div
           key={pro.name}
-          className="flex mt-2 mb-2 p-5 w-90% m-auto max-w-1000px border-b-2 border-gray-400 flex-col md:flex-row"
+          className="flex mt-2 mb-2 p-5 w-90% m-auto max-w-1000px border-b-2 border-gray-400 flex-col lg:flex-row items-center"
         >
           <img
             src={pro.img}
             alt={pro.name}
-            className="object-cover w-full md:w-30rem md:h-60 rounded-xl"
+            className="object-cover w-full lg:w-30rem lg:h-full rounded-xl"
           />
-          <div className="pl-5 flex flex-col justify-between mt-6 md:mt-0">
+
+          <div className="p-0 lg:pl-5 flex flex-col justify-between mt-6 lg:mt-0 w-full lg:w-1/2">
             <h3 className=" font-bold text-2xl mb-6 text-letter">{pro.name}</h3>
             <div className="flex items-center flex-wrap">
               {pro.technologies.map((tech) => (
@@ -29,6 +30,11 @@ export const Projects = () => {
                 />
               ))}
             </div>
+            {pro.currentlyInDevelopment && (
+              <h2 className="font-bold text-2xl mt-3 text-red-600">
+                Currently in development
+              </h2>
+            )}
             <div className="mt-6 break-words">
               <span className=" font-bold">Technologies:</span>
               {pro.technologies.map((tech, index) => {
@@ -54,22 +60,32 @@ export const Projects = () => {
               })}
             </div>
             <p className=" text-base mt-3 text-letter">{pro.description}</p>
-            <div className=" mt-6">
+            <div className=" mt-6 flex flex-wrap gap-3">
               <a
                 href={pro.link}
                 target="_blank"
-                className="h-10 px-5 py-2 text-cyan_custom transition-colors duration-150 border text-lg border-cyan_custom rounded-md focus:shadow-outline hover:bg-cyan_custom hover:text-indigo-100"
+                className="h-10 px-5 py-2 text-cyan_custom transition-colors duration-150 border text-lg border-cyan_custom rounded-md focus:shadow-outline hover:bg-cyan_custom hover:text-indigo-100 flex justify-center items-center"
               >
                 Go to app
               </a>
               <a
-                href={pro.gitHub}
+                href={pro.frontend}
                 target="_blank"
-                className="h-10 px-5 py-2 text-black transition-colors duration-150 border border-black rounded-md focus:shadow-outline hover:bg-black hover:text-indigo-100 text-lg ml-3"
+                className="h-10 px-5 py-2 text-black transition-colors duration-150 border border-black rounded-md focus:shadow-outline hover:bg-black hover:text-indigo-100 text-lg flex justify-center items-center"
               >
                 <span>{"</>"}</span>
-                Code
+                Code Frontend
               </a>
+              {pro.backend && (
+                <a
+                  href={pro?.backend}
+                  target="_blank"
+                  className="h-10 px-5 py-2 text-black transition-colors duration-150 border border-black rounded-md focus:shadow-outline hover:bg-black hover:text-indigo-100 text-lg flex justify-center items-center"
+                >
+                  <span>{"</>"}</span>
+                  Code Backend
+                </a>
+              )}
             </div>
           </div>
         </div>
