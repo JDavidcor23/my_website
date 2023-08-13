@@ -44,7 +44,7 @@ export const Header = () => {
         <h1 className="font-black text-3xl mb-6 text-letter">
           Hi, I am Jorge Diaz, FULLSTACK DEVELOPER
         </h1>
-        <p className=" text-xl text-letter">
+        <p className="text-xl text-letter">
           I am a web developer, who loves to learn every day, best practices,
           technologies and algorithms, passionate about web 3. I have many
           experiences in creating websites using different frameworks and
@@ -52,7 +52,7 @@ export const Header = () => {
           TypeScript, JavaScript, HTML, CSS, Bootstrap, Tailwind CSS and others.
         </p>
         <a
-          href="https://drive.google.com/file/d/1dzPBOcSDYy4B0XwOkfop8oZfyTSCwqLw/view?usp=sharing"
+          href="https://drive.google.com/file/d/1L5XKSnDU4iCkWnsPpsow1fYY8GSGZZkx/view?usp=sharing"
           target="_blank"
         >
           <button className="font-bold text-xl mt-5 p-5 text-white bg-cyan-500 rounded-md">
