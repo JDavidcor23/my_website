@@ -1,5 +1,47 @@
 [
   {
+    "img": "https://camo.githubusercontent.com/f8102b6d2bcfe84b31c188f9254eece57bf121e5844b26ee830179dd74317128/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f64687536676136686c2f696d6167652f75706c6f61642f76313737333130323939342f6775697461726865726f2f7a307277626967626772766e70686b67756877732e706e67",
+    "name": "Rock Hero",
+    "link": "https://guitar-hero-react.vercel.app/",
+    "frontend": "https://github.com/JDavidcor23/Guitar-Hero-React",
+    "description": "A modern implementation of Rock Hero built with React, TypeScript, and Vite, utilizing the Web Audio API and HTML5 Canvas for a smooth and accurate experience.",
+    "currentlyInDevelopment": true,
+    "technologies": [
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/Typescript_logo_2020.svg_xkvvek.png",
+        "alt": "TypeScript"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083047/skilss/Unofficial_JavaScript_logo_2.svg_m72hbc.png",
+        "alt": "JavaScript"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
+        "alt": "React.js"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/html-logo-transparent_kyhnyo.webp",
+        "alt": "HTML"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/tailwindcss-mark.79614a5f61617ba49a0891494521226b_apvjvp.svg",
+        "alt": "Tailwind CSS"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/18133_emd1i9.png",
+        "alt": "Git"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/25231_ar5a30.png",
+        "alt": "GitHub"
+      },
+      {
+        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/nodelogo_mhvwol.png",
+        "alt": "Node.js"
+      }
+    ]
+  },
+  {
     "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1691891277/Screenshot_2023-08-12_204738_lp2jaj.png",
     "name": "Demoo reels",
     "link": "https://demoo-reels.vercel.app/",
