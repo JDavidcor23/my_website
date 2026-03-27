@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // ── Equalizer / amp bars ──────────────────────────────────────────────────
 const AmpEqualizer = () => (
@@ -149,14 +150,12 @@ export const Header = () => {
                 VIEW PROJECTS
               </a>
 
-              <a
-                href="https://drive.google.com/file/d/1L5XKSnDU4iCkWnsPpsow1fYY8GSGZZkx/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/cv"
                 className="border-2 border-white/30 text-white font-rebel italic text-base font-black tracking-[0.12em] px-[32px] py-[12px] no-underline inline-block transition-all duration-200 [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] hover:border-white hover:bg-white/5"
               >
-                DOWNLOAD CV
-              </a>
+                VIEW RESUME
+              </Link>
             </div>
 
             {/* Social */}

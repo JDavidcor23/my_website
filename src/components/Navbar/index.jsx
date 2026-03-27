@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
   { href: "#about",      label: "ABOUT" },
@@ -37,8 +38,14 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:block">
+          {/* CV link + CTA */}
+          <div className="hidden md:flex items-center gap-[20px]">
+            <Link
+              to="/cv"
+              className="nav-link font-mono text-[0.7rem] font-semibold tracking-[0.12em] text-[#555566] transition-colors duration-200 no-underline hover:text-white"
+            >
+              RESUME
+            </Link>
             <a
               href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/"
               target="_blank"
@@ -78,6 +85,13 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <Link
+              to="/cv"
+              onClick={() => setOpen(false)}
+              className="block font-mono text-[0.75rem] font-semibold tracking-[0.12em] text-[#555566] py-[14px] border-b border-white/[0.04] no-underline"
+            >
+              CV
+            </Link>
             <a
               href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/"
               target="_blank"
