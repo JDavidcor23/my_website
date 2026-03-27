@@ -1,36 +1,60 @@
 import React from "react";
 
+const FOOTER_LINKS = [
+  { label: "ABOUT",      href: "#about" },
+  { label: "TECH_STACK", href: "#skills" },
+  { label: "PROJECTS",   href: "#projects" },
+];
+
 export const Footer = () => {
   return (
-    <footer className=" bg-cyan_custom ">
-      <div className="flex items-center justify-between max-w-1000px p-5 m-auto flex-row">
-        <h2 className=" w-40 sm:w-96 text-xl text-white font-bold">
-          Made by Jorge David Diaz Cordero 😁
-        </h2>
-        <div className="flex">
-          <a
-            href="https://github.com/JDavidcor23"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              id="github"
-              className="bg-white sticky duration-500 border-2 border-black  w-12 transform m-3 hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-black "
+    <footer className="bg-[#0a0a0a] border-t border-[#CC0000]/15 p-[32px_24px]">
+      {/* Top torn accent */}
+      <div className="h-[3px] bg-[repeating-linear-gradient(90deg,#CC0000_0px,#CC0000_20px,transparent_20px,transparent_30px)] opacity-60 mb-[24px]" />
+
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between flex-wrap gap-[20px]">
+        {/* Brand */}
+        <div>
+          <div className="font-rebel font-black italic text-[1.1rem] text-white tracking-[0.04em] mb-[4px]">
+            JORGE<span className="text-[#CC0000]">_</span>DIAZ
+          </div>
+          <div className="font-mono text-[0.55rem] text-[#2a2a2a] tracking-[0.1em]">
+            © 2024 — FULLSTACK DEVELOPER
+          </div>
+        </div>
+
+        {/* Nav links */}
+        <div className="flex gap-[28px] flex-wrap">
+          {FOOTER_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-mono text-[0.58rem] text-[#2a2a2a] tracking-[0.11em] no-underline transition-colors duration-200 hover:text-[#CC0000]"
             >
-              <i className="fab fa-github"></i>
-            </button>
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Social icons */}
+        <div className="flex gap-[18px] items-center">
+          <a href="https://github.com/JDavidcor23" target="_blank" rel="noopener noreferrer"
+            className="text-[#2a2a2a] text-[1.1rem] transition-colors duration-200 hover:text-white"
+            aria-label="GitHub"
+          >
+            <i className="fab fa-github" />
           </a>
-          <a
-            href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/" target="_blank" rel="noopener noreferrer"
+            className="text-[#2a2a2a] text-[1.1rem] transition-colors duration-200 hover:text-white"
+            aria-label="LinkedIn"
           >
-            <button
-              id="linkedin"
-              className="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 m-3 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </button>
+            <i className="fab fa-linkedin-in" />
+          </a>
+          <a href="#"
+            className="text-[#2a2a2a] text-[1.1rem] transition-colors duration-200 hover:text-[#CC0000]"
+            aria-label="Power"
+          >
+            <i className="fas fa-bolt" />
           </a>
         </div>
       </div>

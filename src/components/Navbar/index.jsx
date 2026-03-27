@@ -1,79 +1,95 @@
-import { Fragment } from "react";
-import { Disclosure, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+
+const NAV_LINKS = [
+  { href: "#about",    label: "ABOUT" },
+  { href: "#skills",   label: "TECH_STACK" },
+  { href: "#projects", label: "PROJECTS" },
+];
 
 export const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <Disclosure as="nav" className="bg-white shadow fixed top-0 w-full z-10">
-        {({ open }) => (
-          <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start max-w-1000px m-auto">
-                  <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a
-                      href="#about"
-                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-900 hover:border-cyan-600 hover:text-gray-700"
-                    >
-                      About
-                    </a>
-                    <a
-                      href="#skills"
-                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-900 hover:border-cyan-600 hover:text-gray-700"
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#projects"
-                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-900 hover:border-cyan-600 hover:text-gray-700"
-                    >
-                      Projects
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <nav
+        className="fixed top-0 w-full z-[50] bg-[#080808]/94 backdrop-blur-[12px] border-b border-[#CC0000]/20"
+      >
+        <div className="max-w-[1280px] mx-auto px-[24px] h-[64px] flex items-center justify-between">
+          {/* Logo */}
+          <a
+            href="#"
+            className="font-rebel font-black italic text-[1.5rem] text-white tracking-[0.04em] no-underline"
+          >
+            JORGE<span className="text-[#CC0000]">_</span>DIAZ
+          </a>
 
-            <Disclosure.Panel className="sm:hidden">
-              <div className="space-y-1 pt-2 pb-4">
-                <Disclosure.Button
-                  as="a"
-                  href="#about"
-                  className="block border-l-4 border-cyan-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-cyan-700"
-                >
-                  About
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#skills"
-                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-                >
-                  Skills
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#projects"
-                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-                >
-                  Projects
-                </Disclosure.Button>
-              </div>
-            </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-      <div className=" h-16"></div>
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-[36px]">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="nav-link font-mono text-[0.7rem] font-semibold tracking-[0.12em] text-[#555566] transition-colors duration-200 no-underline hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="hidden md:block">
+            <a
+              href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-rebel italic text-[0.95rem] font-black tracking-[0.12em] text-white bg-[#CC0000] border-none px-[22px] py-[8px] no-underline transition-all duration-200 [clip-path:polygon(0_0,calc(100%-8px)_0,100%_100%,8px_100%)] inline-block hover:bg-[#ff1a1a] hover:shadow-[0_0_20px_rgba(204,0,0,0.4)]"
+            >
+              HIRE ME
+            </a>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden bg-transparent border-none cursor-pointer p-[4px]"
+            aria-label="Toggle menu"
+          >
+            <div className="flex flex-col gap-[5px]">
+              <span className={`block w-[24px] h-[2px] bg-[#CC0000] transition-all duration-200 ${open ? "rotate-45 translate-x-[5px] translate-y-[5px]" : ""}`} />
+              <span className={`block w-[24px] h-[2px] bg-white transition-all duration-200 ${open ? "opacity-0" : "opacity-100"}`} />
+              <span className={`block w-[24px] h-[2px] bg-[#CC0000] transition-all duration-200 ${open ? "-rotate-45 translate-x-[5px] -translate-y-[5px]" : ""}`} />
+            </div>
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-[#0a0a0a] ${open ? "max-h-[400px] border-t border-[#CC0000]/15" : "max-h-0"}`}
+        >
+          <div className="p-[16px_24px]">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block font-mono text-[0.75rem] font-semibold tracking-[0.12em] text-[#555566] py-[14px] border-b border-white/[0.04] no-underline"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="https://www.linkedin.com/in/jorge-david-diaz-cordero-web-developer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="block mt-[20px] bg-[#CC0000] text-white font-rebel italic text-base font-black tracking-[0.12em] p-[12px] text-center no-underline"
+            >
+              HIRE ME
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div className="h-[64px]" />
     </>
   );
 };

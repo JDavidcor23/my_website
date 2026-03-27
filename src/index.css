@@ -1,3 +1,266 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* =============================================
+   CODE_REBEL — Global Styles
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #00F5FF; }
+
+/* ---- Marquee animation ---- */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  animation: marquee 40s linear infinite;
+}
+
+/* ---- Cursor blink ---- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ---- Glitch effect ---- */
+@keyframes glitch {
+  0%, 88%, 100% { transform: translate(0); clip-path: none; }
+  90%           { transform: translate(-3px, 1px); }
+  92%           { transform: translate(3px, -1px); }
+  94%           { transform: translate(-2px, 2px); }
+  96%           { transform: translate(2px, -2px); }
+}
+
+.glitch {
+  animation: glitch 5s infinite;
+}
+
+/* ---- Scanlines ---- */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.04) 0px,
+    rgba(0, 0, 0, 0.04) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ---- Gig card hover ---- */
+.gig-card {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.gig-card:hover {
+  border-color: rgba(0, 245, 255, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+/* ---- Nav link underline ---- */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #CC0000;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.nav-link.active::after { width: 100%; }
+
+/* ---- Marquee reverse ---- */
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-track-reverse {
+  display: inline-flex;
+  align-items: center;
+  animation: marquee-reverse 45s linear infinite;
+}
+
+/* ---- Skill card ---- */
+.skill-card {
+  position: relative;
+  background: #111118;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: default;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,245,255,0.04) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(0,245,255,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0,245,255,0.08), 0 0 0 1px rgba(0,245,255,0.12);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card img {
+  filter: grayscale(80%) brightness(0.8);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.08);
+}
+
+/* ---- Neon glow ---- */
+.neon-cyan {
+  text-shadow: 0 0 12px rgba(0, 245, 255, 0.7), 0 0 30px rgba(0, 245, 255, 0.3);
+}
+.neon-pink {
+  text-shadow: 0 0 12px rgba(255, 0, 110, 0.7), 0 0 30px rgba(255, 0, 110, 0.3);
+}
+
+/* ---- BG grid ---- */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* ---- Rock grain texture ---- */
+.rock-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+/* ---- Diagonal slash divider ---- */
+.slash-divider {
+  position: relative;
+  overflow: hidden;
+}
+.slash-divider::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -5%;
+  width: 110%; height: 100%;
+  background: inherit;
+  transform: skewY(-1.5deg);
+  transform-origin: top left;
+}
+
+/* ---- Distressed border ---- */
+.distressed-border {
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  box-shadow:
+    inset 0 0 0 1px rgba(204,0,0,0.08),
+    0 0 20px rgba(204,0,0,0.06);
+}
+.distressed-border:hover {
+  border-color: rgba(204, 0, 0, 0.6);
+  box-shadow:
+    inset 0 0 0 1px rgba(204,0,0,0.15),
+    0 0 30px rgba(204,0,0,0.12);
+}
+
+/* ---- Stage light (hero) ---- */
+.stage-light {
+  background:
+    radial-gradient(ellipse 60% 50% at 20% -10%, rgba(255,140,0,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% -5%,  rgba(204,0,0,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 50% 110%, rgba(0,245,255,0.04) 0%, transparent 60%);
+}
+
+/* ---- Amp bars (equalizer animation) ---- */
+@keyframes amp1 { 0%,100%{height:6px}  50%{height:22px} }
+@keyframes amp2 { 0%,100%{height:14px} 30%{height:6px}  70%{height:28px} }
+@keyframes amp3 { 0%,100%{height:20px} 40%{height:8px}  80%{height:14px} }
+@keyframes amp4 { 0%,100%{height:10px} 60%{height:26px} }
+@keyframes amp5 { 0%,100%{height:16px} 20%{height:6px}  70%{height:24px} }
+
+.amp-bar-1 { animation: amp1 0.9s ease-in-out infinite; }
+.amp-bar-2 { animation: amp2 1.1s ease-in-out infinite; }
+.amp-bar-3 { animation: amp3 0.7s ease-in-out infinite; }
+.amp-bar-4 { animation: amp4 1.3s ease-in-out infinite; }
+.amp-bar-5 { animation: amp5 0.8s ease-in-out infinite; }
+
+/* ---- Fade-in on load ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+.fade-up-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-2 { animation-delay: 0.25s; opacity: 0; }
+.fade-up-3 { animation-delay: 0.4s; opacity: 0; }
+.fade-up-4 { animation-delay: 0.55s; opacity: 0; }
+.fade-up-5 { animation-delay: 0.7s; opacity: 0; }
