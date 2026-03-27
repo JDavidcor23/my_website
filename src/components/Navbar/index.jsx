@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { href: "#about",    label: "ABOUT" },
-  { href: "#skills",   label: "TECH_STACK" },
-  { href: "#projects", label: "PROJECTS" },
+  { href: "#about",      label: "ABOUT" },
+  { href: "#skills",     label: "TECH_STACK" },
+  { href: "#experience", label: "EXPERIENCE" },
+  { href: "#projects",   label: "PROJECTS" },
 ];
 
 export const Navbar = () => {

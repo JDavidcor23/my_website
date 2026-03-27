@@ -4,9 +4,7 @@ import projectsData from "../../data/projectsData.json";
 const LABELS = ["FULL_STACK", "REAL_TIME", "FULL_STACK", "FRONTEND", "GRAPHQL", "E-COMMERCE", "FRONTEND"];
 
 const FeaturedCard = ({ project, label }) => (
-  <div
-    className="group bg-[#0f0f0f] border border-[#CC0000]/20 overflow-hidden row-span-2 flex flex-col transition-all duration-200 hover:border-[#CC0000]/50 hover:-translate-y-[2px]"
-  >
+  <div className="group bg-[#0f0f0f] border border-[#CC0000]/20 overflow-hidden row-span-2 flex flex-col transition-all duration-200 hover:border-[#CC0000]/50 hover:-translate-y-[2px]">
     {/* Image */}
     <div className="relative h-[280px] overflow-hidden flex-shrink-0">
       <img
@@ -15,7 +13,6 @@ const FeaturedCard = ({ project, label }) => (
         className="w-full h-full object-cover grayscale-[30%] brightness-[0.5] transition-transform duration-400 ease-in-out group-hover:scale-[1.04]"
       />
       <div className="absolute inset-0 bg-[linear-gradient(to_top,#0f0f0f_0%,transparent_55%)]" />
-      {/* Label */}
       <div className="absolute bottom-[14px] left-[14px] bg-[#CC0000] px-[10px] py-[3px] [clip-path:polygon(0_0,calc(100%-6px)_0,100%_100%,6px_100%)]">
         <span className="font-mono text-[0.58rem] font-bold text-white tracking-[0.14em]">
           {label}
@@ -32,7 +29,6 @@ const FeaturedCard = ({ project, label }) => (
         {project.description}
       </p>
 
-      {/* Tech tags */}
       <div className="flex flex-wrap gap-[6px] mb-[18px]">
         {project.technologies.slice(0, 4).map(t => (
           <span key={t.alt} className="font-mono text-[0.55rem] text-[#333344] border border-[#1a1a1a] px-[9px] py-[2px] tracking-[0.08em]">
@@ -41,7 +37,6 @@ const FeaturedCard = ({ project, label }) => (
         ))}
       </div>
 
-      {/* Actions */}
       <div className="flex gap-[10px] flex-wrap items-center">
         <a href={project.link} target="_blank" rel="noopener noreferrer"
           className="bg-[#CC0000] text-white font-rebel italic text-[0.85rem] font-black tracking-[0.12em] px-[18px] py-[6px] no-underline transition-all duration-200 [clip-path:polygon(0_0,calc(100%-6px)_0,100%_100%,6px_100%)] hover:bg-[#ff1a1a] hover:shadow-[0_0_20px_rgba(204,0,0,0.4)]"
@@ -71,49 +66,59 @@ const FeaturedCard = ({ project, label }) => (
 );
 
 const SmallCard = ({ project, label }) => (
-  <div
-    className="group bg-[#0f0f0f] border border-white/5 p-[22px] relative flex flex-col transition-all duration-200 hover:border-[#CC0000]/40 hover:-translate-y-[2px]"
-  >
-    {/* Icon */}
-    <div className="w-[38px] h-[38px] border border-[#CC0000]/30 flex items-center justify-center mb-[16px] flex-shrink-0">
-      <i className="fas fa-bolt text-[#CC0000] text-[0.85rem]" />
+  <div className="group bg-[#0f0f0f] border border-white/5 overflow-hidden flex flex-col transition-all duration-200 hover:border-[#CC0000]/40 hover:-translate-y-[2px]">
+    {/* Image */}
+    <div className="relative h-[150px] overflow-hidden flex-shrink-0">
+      <img
+        src={project.img}
+        alt={project.name}
+        className="w-full h-full object-cover grayscale-[40%] brightness-[0.45] transition-transform duration-400 ease-in-out group-hover:scale-[1.04]"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,#0f0f0f_0%,transparent_60%)]" />
+      <div className="absolute top-[10px] right-[10px] font-mono text-[0.5rem] text-[#ffffff22] tracking-[0.1em]">
+        {label}
+      </div>
     </div>
 
-    <h3 className="font-rebel font-black italic text-[1.3rem] text-white tracking-[0.02em] mb-[8px] leading-[1.1]">
-      {project.name.toUpperCase()}
-    </h3>
-    <p className="font-mono text-[0.66rem] text-[#555566] leading-[1.65] mb-[16px] flex-1">
-      {project.description}
-    </p>
+    {/* Content */}
+    <div className="p-[18px_20px] flex-1 flex flex-col">
+      <h3 className="font-rebel font-black italic text-[1.3rem] text-white tracking-[0.02em] mb-[8px] leading-[1.1]">
+        {project.name.toUpperCase()}
+      </h3>
+      <p className="font-mono text-[0.66rem] text-[#555566] leading-[1.65] mb-[14px] flex-1">
+        {project.description}
+      </p>
 
-    {/* Tech tags */}
-    <div className="flex flex-wrap gap-[5px] mb-[16px]">
-      {project.technologies.slice(0, 3).map(t => (
-        <span key={t.alt} className="font-mono text-[0.52rem] text-[#2a2a2a] border border-[#161616] px-[8px] py-[2px] tracking-[0.08em]">
-          {t.alt}
-        </span>
-      ))}
-    </div>
+      <div className="flex flex-wrap gap-[5px] mb-[14px]">
+        {project.technologies.slice(0, 3).map(t => (
+          <span key={t.alt} className="font-mono text-[0.52rem] text-[#2a2a2a] border border-[#161616] px-[8px] py-[2px] tracking-[0.08em]">
+            {t.alt}
+          </span>
+        ))}
+      </div>
 
-    <div className="flex gap-[8px] flex-wrap items-center">
-      <a href={project.link} target="_blank" rel="noopener noreferrer"
-        className="bg-[#CC0000] text-white font-rebel italic text-[0.8rem] font-black tracking-[0.1em] px-[14px] py-[5px] no-underline transition-all duration-200 [clip-path:polygon(0_0,calc(100%-5px)_0,100%_100%,5px_100%)] hover:bg-[#ff1a1a]"
-      >
-        LAUNCH
-      </a>
-      <a href={project.frontend} target="_blank" rel="noopener noreferrer"
-        className="border border-white/10 text-[#444455] font-mono text-[0.57rem] font-bold tracking-[0.1em] px-[12px] py-[5px] no-underline transition-all duration-200 hover:text-white hover:border-white/30"
-      >
-        CODE
-      </a>
-      {project.currentlyInDevelopment && (
-        <span className="font-mono text-[0.52rem] text-[#CC0000] tracking-[0.1em]">● DEV</span>
-      )}
-    </div>
-
-    {/* Label watermark */}
-    <div className="absolute top-[14px] right-[14px] font-mono text-[0.5rem] text-[#1a1a1a] tracking-[0.1em]">
-      {label}
+      <div className="flex gap-[8px] flex-wrap items-center">
+        <a href={project.link} target="_blank" rel="noopener noreferrer"
+          className="bg-[#CC0000] text-white font-rebel italic text-[0.8rem] font-black tracking-[0.1em] px-[14px] py-[5px] no-underline transition-all duration-200 [clip-path:polygon(0_0,calc(100%-5px)_0,100%_100%,5px_100%)] hover:bg-[#ff1a1a]"
+        >
+          LAUNCH
+        </a>
+        <a href={project.frontend} target="_blank" rel="noopener noreferrer"
+          className="border border-white/10 text-[#444455] font-mono text-[0.57rem] font-bold tracking-[0.1em] px-[12px] py-[5px] no-underline transition-all duration-200 hover:text-white hover:border-white/30"
+        >
+          CODE
+        </a>
+        {project.backend && (
+          <a href={project.backend} target="_blank" rel="noopener noreferrer"
+            className="border border-[#CC0000]/20 text-[#772222] font-mono text-[0.57rem] font-bold tracking-[0.1em] px-[12px] py-[5px] no-underline transition-all duration-200 hover:border-[#CC0000]/45 hover:text-[#CC0000]"
+          >
+            API
+          </a>
+        )}
+        {project.currentlyInDevelopment && (
+          <span className="font-mono text-[0.52rem] text-[#CC0000] tracking-[0.1em]">● DEV</span>
+        )}
+      </div>
     </div>
   </div>
 );

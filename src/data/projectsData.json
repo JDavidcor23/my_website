@@ -5,7 +5,7 @@
     "link": "https://guitar-hero-react.vercel.app/",
     "frontend": "https://github.com/JDavidcor23/Guitar-Hero-React",
     "description": "A modern implementation of Rock Hero built with React, TypeScript, and Vite, utilizing the Web Audio API and HTML5 Canvas for a smooth and accurate experience.",
-    "currentlyInDevelopment": true,
+    "currentlyInDevelopment": false,
     "technologies": [
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/Typescript_logo_2020.svg_xkvvek.png",
@@ -131,79 +131,6 @@
       {
         "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
         "alt": "Redux"
-      }
-    ]
-  },
-  {
-    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/v1653352054/portfolio/qj7ebeztbzagv1dcw40x.png",
-    "name": "Rick and Morty app",
-    "description": "This app allows you to generate new characters from the Rick and Morty series, have a history of the characters brought in and filter them in a search engine.",
-    "link": "https://jdavidcor23.github.io/rick-morty-graphql/",
-    "frontend": "https://github.com/JDavidcor23/rick-morty-graphql",
-    "technologies": [
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083047/skilss/Unofficial_JavaScript_logo_2.svg_m72hbc.png",
-        "alt": "JavaScript"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669171440/skilss/GraphQL_Logo.svg_z2r6kn.png",
-        "alt": "GraphQL"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/1_7jRD5QhgARucFKvRHFxpOg_x209mv.png",
-        "alt": "styled-components"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
-        "alt": "React.js"
-      }
-    ]
-  },
-  {
-    "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683130863/Screenshot_2023-05-03_112052_gbo25c.png",
-    "name": "Harry Potter app",
-    "description": "Add a harry potter character, if he/she is alive or dead and get the data in real time. (integration with Bitbucket pipelines CI/CD)",
-    "backend": "https://github.com/JDavidcor23/graphql_potter",
-    "descriptionBackend": "This is the backend of the harry potter app, it is a graphql api, which allows you to add a character, if he/she is alive or dead and get the data in real time.",
-    "link": "http://harrry-potter-graphql-jdavidcor23.s3-website-us-east-1.amazonaws.com/",
-    "frontend": "https://github.com/JDavidcor23/client_graphql_potter",
-    "technologies": [
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
-        "alt": "React.js"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1683131183/mongodb_bywyac.svg",
-        "alt": "Mongodb"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669171440/skilss/GraphQL_Logo.svg_z2r6kn.png",
-        "alt": "GraphQL"
-      }
-    ]
-  },
-  {
-    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/v1643308739/pvipoads96rq9qklinnn.png",
-    "name": "Amazonas",
-    "description": "This page is inspired by Amazon, which has several items for you to buy, you can log in with Google, Facebook or your email account, you can also filter, search, add to cart, sell, delete your products and edit them.",
-    "link": "https://as-74bd2.web.app/",
-    "frontend": "https://github.com/JDavidcor23/amazonas",
-    "technologies": [
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/800px-React.svg_jiyukc.png",
-        "alt": "React.js"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083055/skilss/1_7jRD5QhgARucFKvRHFxpOg_x209mv.png",
-        "alt": "styled-components"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/5848309bcef1014c0b5e4a9a_tsig4z.png",
-        "alt": "Redux"
-      },
-      {
-        "img_skill": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/1_R4c8lHBHuH5qyqOtZb3h-w_jrh5cn.webp",
-        "alt": "Firebase"
       }
     ]
   },

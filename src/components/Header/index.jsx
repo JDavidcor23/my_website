@@ -103,7 +103,7 @@ export const Header = () => {
             >
               <span className="w-[6px] h-[6px] rounded-full bg-white block animate-pulse" />
               <span className="font-mono text-[0.62rem] font-bold text-white tracking-[0.18em] skew-x-4 block">
-                AVAILABLE_FOR_HIRE
+                AVAILABLE_FOR_CODE
               </span>
             </div>
 
