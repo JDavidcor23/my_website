@@ -3,17 +3,42 @@ import projectsData from "../../data/projectsData.json";
 
 const LABELS = ["FULL_STACK", "REAL_TIME", "FULL_STACK", "FRONTEND", "GRAPHQL", "E-COMMERCE", "FRONTEND"];
 
+const ProjectCarousel = ({ images, name, isFeatured }) => {
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    if (images.length <= 1) return;
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="relative w-full h-full">
+      {images.map((img, i) => (
+        <img
+          key={img + i}
+          src={img}
+          alt={`${name} display ${i}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-in-out 
+            ${isFeatured ? "grayscale-[30%] brightness-[0.5]" : "grayscale-[40%] brightness-[0.45]"}
+            ${i === index ? "opacity-100 scale-[1.04]" : "opacity-0 scale-100"}
+          `}
+        />
+      ))}
+      {/* Overlay gradient */}
+      <div className={`absolute inset-0 bg-[linear-gradient(to_top,#0f0f0f_0%,transparent_55%)]`} />
+    </div>
+  );
+};
+
 const FeaturedCard = ({ project, label }) => (
   <div className="group bg-[#0f0f0f] border border-[#CC0000]/20 overflow-hidden row-span-2 flex flex-col transition-all duration-200 hover:border-[#CC0000]/50 hover:-translate-y-[2px]">
-    {/* Image */}
+    {/* Image Carousel */}
     <div className="relative h-[280px] overflow-hidden flex-shrink-0">
-      <img
-        src={project.img}
-        alt={project.name}
-        className="w-full h-full object-cover grayscale-[30%] brightness-[0.5] transition-transform duration-400 ease-in-out group-hover:scale-[1.04]"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,#0f0f0f_0%,transparent_55%)]" />
-      <div className="absolute bottom-[14px] left-[14px] bg-[#CC0000] px-[10px] py-[3px] [clip-path:polygon(0_0,calc(100%-6px)_0,100%_100%,6px_100%)]">
+      <ProjectCarousel images={project.img} name={project.name} isFeatured={true} />
+      <div className="absolute bottom-[14px] left-[14px] bg-[#CC0000] px-[10px] py-[3px] [clip-path:polygon(0_0,calc(100%-6px)_0,100%_100%,6px_100%)] z-10">
         <span className="font-mono text-[0.58rem] font-bold text-white tracking-[0.14em]">
           {label}
         </span>
@@ -67,15 +92,10 @@ const FeaturedCard = ({ project, label }) => (
 
 const SmallCard = ({ project, label }) => (
   <div className="group bg-[#0f0f0f] border border-white/5 overflow-hidden flex flex-col transition-all duration-200 hover:border-[#CC0000]/40 hover:-translate-y-[2px]">
-    {/* Image */}
+    {/* Image Carousel */}
     <div className="relative h-[150px] overflow-hidden flex-shrink-0">
-      <img
-        src={project.img}
-        alt={project.name}
-        className="w-full h-full object-cover grayscale-[40%] brightness-[0.45] transition-transform duration-400 ease-in-out group-hover:scale-[1.04]"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(to_top,#0f0f0f_0%,transparent_60%)]" />
-      <div className="absolute top-[10px] right-[10px] font-mono text-[0.5rem] text-[#ffffff22] tracking-[0.1em]">
+      <ProjectCarousel images={project.img} name={project.name} isFeatured={false} />
+      <div className="absolute top-[10px] right-[10px] font-mono text-[0.5rem] text-[#ffffff22] tracking-[0.14em] z-10">
         {label}
       </div>
     </div>

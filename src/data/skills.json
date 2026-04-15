@@ -62,5 +62,13 @@
   {
     "img": "https://res.cloudinary.com/dbtk64lp4/image/upload/v1669083472/skilss/tailwindcss-mark.79614a5f61617ba49a0891494521226b_apvjvp.svg",
     "name": "Tailwind CSS"
+  },
+  {
+    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/q_auto/f_auto/v1776266034/klnkpne9tmikvxewpu7m.svg",
+    "name": "Zustand"
+  },
+  {
+    "img": "https://res.cloudinary.com/dhu6ga6hl/image/upload/q_auto/f_auto/v1776266042/defonjpj1kjfarkqksdf.png",
+    "name": "Next.js"
   }
 ]
