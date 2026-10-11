@@ -151,6 +151,42 @@ const ArticleView = ({ article }) => {
             </div>
           </article>
 
+          {/* Project call to action: every article leads to the live project */}
+          {project && (
+            <section
+              aria-label={`Try ${project.name}`}
+              className="mt-[64px] max-w-[68ch] border border-[#CC0000]/30 bg-[#0f0f0f] p-[24px]"
+            >
+              <p className="mt-0 mb-[8px] font-mono text-[0.62rem] font-bold tracking-[0.18em] text-[#CC0000]">
+                THE PROJECT
+              </p>
+              <p className="mt-0 mb-[10px] font-rebel text-[1.75rem] font-black italic leading-[1.1] text-white">
+                {project.name.toUpperCase()}
+              </p>
+              <p className="mt-0 mb-[20px] font-read text-[1rem] leading-[1.6] text-[#b4b4c2]">
+                {project.tagline}
+              </p>
+              <div className="flex flex-wrap items-center gap-[10px]">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#CC0000] px-[20px] py-[8px] font-rebel text-[0.95rem] font-black italic tracking-[0.12em] text-white no-underline transition-all duration-200 [clip-path:polygon(0_0,calc(100%-8px)_0,100%_100%,8px_100%)] hover:bg-[#ff1a1a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  TRY {project.name.toUpperCase()}
+                </a>
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-white/20 px-[14px] py-[8px] font-mono text-[0.62rem] font-bold tracking-[0.1em] text-[#a0a0b0] no-underline transition-colors duration-200 hover:border-white/40 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  {"</>"} VIEW THE CODE
+                </a>
+              </div>
+            </section>
+          )}
+
           {/* Prev / next within the project */}
           <nav
             aria-label={`More from ${project?.name ?? article.project}`}
