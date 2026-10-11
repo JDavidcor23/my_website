@@ -2,8 +2,9 @@
   {
     "img": ["https://res.cloudinary.com/dhu6ga6hl/image/upload/q_auto/f_auto/v1776266160/atj4agvxpvbtl3aq1yk6.jpg", "https://res.cloudinary.com/dhu6ga6hl/image/upload/q_auto/f_auto/v1776266164/a4eyjbw2ic8wbmpaixpo.jpg"],
     "name": "Pixel Forge",
-    "link": "https://pixelforge-teal.vercel.app/",
+    "link": "https://www.pixelforgeia.com/",
     "frontend": "https://github.com/JDavidcor23/pixelforge",
+    "articles": "pixelforge",
     "description": "PixelForge is a specialized game development engine designed to harmonize the charm of classic 16x16 pixel art with the efficiency of artificial intelligence. It serves as a comprehensive workspace where developers can bypass traditional bottlenecks in asset creation and logic scripting.",
     "currentlyInDevelopment": false,
     "technologies": [

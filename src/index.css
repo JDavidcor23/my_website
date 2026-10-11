@@ -264,3 +264,27 @@ body {
 .fade-up-3 { animation-delay: 0.4s; opacity: 0; }
 .fade-up-4 { animation-delay: 0.55s; opacity: 0; }
 .fade-up-5 { animation-delay: 0.7s; opacity: 0; }
+
+/* ---- Keyboard focus ---- */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #ff1a1a;
+  outline-offset: 3px;
+}
+
+/* ---- Article diagrams: schematic grid behind ASCII / code blocks ---- */
+.diagram-grid {
+  background-color: #0b0b0b;
+  background-image:
+    linear-gradient(rgba(204, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cursor-blink { animation: none; }
+}

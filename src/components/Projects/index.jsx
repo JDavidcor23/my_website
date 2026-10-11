@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import projectsData from "../../data/projectsData.json";
 
 const LABELS = ["FULL_STACK", "REAL_TIME", "FULL_STACK", "FRONTEND", "GRAPHQL", "E-COMMERCE", "FRONTEND"];
@@ -80,6 +81,13 @@ const FeaturedCard = ({ project, label }) => (
             {"</>"} BACKEND
           </a>
         )}
+        {project.articles && (
+          <Link to="/articles"
+            className="border border-[#CC0000]/25 text-[#ff4d4d] font-mono text-[0.6rem] font-bold tracking-[0.1em] px-[14px] py-[6px] no-underline transition-all duration-200 hover:border-[#CC0000]/60 hover:text-white"
+          >
+            ARTICLES
+          </Link>
+        )}
         {project.currentlyInDevelopment && (
           <span className="font-mono text-[0.55rem] text-[#CC0000] tracking-[0.1em]">
             ● IN DEV
@@ -134,6 +142,13 @@ const SmallCard = ({ project, label }) => (
           >
             API
           </a>
+        )}
+        {project.articles && (
+          <Link to="/articles"
+            className="border border-[#CC0000]/20 text-[#ff4d4d] font-mono text-[0.57rem] font-bold tracking-[0.1em] px-[12px] py-[5px] no-underline transition-all duration-200 hover:border-[#CC0000]/[0.45] hover:text-white"
+          >
+            ARTICLES
+          </Link>
         )}
         {project.currentlyInDevelopment && (
           <span className="font-mono text-[0.52rem] text-[#CC0000] tracking-[0.1em]">● DEV</span>

@@ -1,4 +1,5 @@
 import React from "react";
+import { SectionLink } from "../SectionLink";
 
 const FOOTER_LINKS = [
   { label: "ABOUT",      href: "#about" },
@@ -8,7 +9,7 @@ const FOOTER_LINKS = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#CC0000]/15 p-[32px_24px]">
+    <footer className="bg-[#0a0a0a] border-t border-[#CC0000]/[0.15] p-[32px_24px]">
       {/* Top torn accent */}
       <div className="h-[3px] bg-[repeating-linear-gradient(90deg,#CC0000_0px,#CC0000_20px,transparent_20px,transparent_30px)] opacity-60 mb-[24px]" />
 
@@ -26,13 +27,13 @@ export const Footer = () => {
         {/* Nav links */}
         <div className="flex gap-[28px] flex-wrap">
           {FOOTER_LINKS.map((link) => (
-            <a
+            <SectionLink
               key={link.label}
-              href={link.href}
+              hash={link.href}
               className="font-mono text-[0.58rem] text-[#2a2a2a] tracking-[0.11em] no-underline transition-colors duration-200 hover:text-[#CC0000]"
             >
               {link.label}
-            </a>
+            </SectionLink>
           ))}
         </div>
 
