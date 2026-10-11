@@ -60,4 +60,4 @@ My advice: measure first, then decide where Rust really helps.
 
 ---
 
-Want to see where each piece lives in the code? Read the [code map in the PixelForge repository](https://github.com/JDavidcor23/pixelforge/blob/docs/architecture-playbook/docs/architecture/code-map.md).
+Want to see where each piece lives in the code? Read the [code map in the PixelForge repository](https://github.com/JDavidcor23/pixelforge/blob/master/docs/architecture/code-map.md).
