@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         rebel: ['"Barlow Condensed"', "sans-serif"],
         mono:  ['"JetBrains Mono"', "monospace"],
+        read:  ["Barlow", "system-ui", "sans-serif"],
       },
       colors: {
         rebel: {

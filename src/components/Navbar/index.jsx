@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { SectionLink } from "../SectionLink";
 
 const NAV_LINKS = [
   { href: "#about",      label: "ABOUT" },
@@ -10,6 +11,8 @@ const NAV_LINKS = [
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const onArticles = pathname.startsWith("/articles");
 
   return (
     <>
@@ -18,24 +21,30 @@ export const Navbar = () => {
       >
         <div className="max-w-[1280px] mx-auto px-[24px] h-[64px] flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#"
+          <SectionLink
             className="font-rebel font-black italic text-[1.5rem] text-white tracking-[0.04em] no-underline"
           >
             JORGE<span className="text-[#CC0000]">_</span>DIAZ
-          </a>
+          </SectionLink>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-[36px]">
             {NAV_LINKS.map((link) => (
-              <a
+              <SectionLink
                 key={link.label}
-                href={link.href}
+                hash={link.href}
                 className="nav-link font-mono text-[0.7rem] font-semibold tracking-[0.12em] text-[#555566] transition-colors duration-200 no-underline hover:text-white"
               >
                 {link.label}
-              </a>
+              </SectionLink>
             ))}
+            <Link
+              to="/articles"
+              aria-current={onArticles ? "page" : undefined}
+              className={`nav-link font-mono text-[0.7rem] font-semibold tracking-[0.12em] transition-colors duration-200 no-underline hover:text-white ${onArticles ? "active text-white" : "text-[#555566]"}`}
+            >
+              ARTICLES
+            </Link>
           </div>
 
           {/* CV link + CTA */}
@@ -76,15 +85,23 @@ export const Navbar = () => {
         >
           <div className="p-[16px_24px]">
             {NAV_LINKS.map((link) => (
-              <a
+              <SectionLink
                 key={link.label}
-                href={link.href}
+                hash={link.href}
                 onClick={() => setOpen(false)}
                 className="block font-mono text-[0.75rem] font-semibold tracking-[0.12em] text-[#555566] py-[14px] border-b border-white/[0.04] no-underline"
               >
                 {link.label}
-              </a>
+              </SectionLink>
             ))}
+            <Link
+              to="/articles"
+              onClick={() => setOpen(false)}
+              aria-current={onArticles ? "page" : undefined}
+              className={`block font-mono text-[0.75rem] font-semibold tracking-[0.12em] py-[14px] border-b border-white/[0.04] no-underline ${onArticles ? "text-white" : "text-[#555566]"}`}
+            >
+              ARTICLES
+            </Link>
             <Link
               to="/cv"
               onClick={() => setOpen(false)}
