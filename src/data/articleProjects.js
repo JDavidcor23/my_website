@@ -7,7 +7,7 @@ export const ARTICLE_PROJECTS = [
     tagline:
       "PixelForge is a specialized game development engine designed to harmonize the charm of classic 16x16 pixel art with the efficiency of artificial intelligence.",
     repo: "https://github.com/JDavidcor23/pixelforge",
-    live: "https://pixelforge-teal.vercel.app/",
+    live: "https://www.pixelforgeia.com/",
   },
 ];
 
